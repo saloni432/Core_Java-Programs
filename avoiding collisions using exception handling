@@ -1,0 +1,37 @@
+package exp7.pkg4;
+import java.util.Scanner;
+class Ques4 extends Exception
+{
+    Ques4(String s)
+    {
+        super(s);
+    }
+}
+public class Exp74
+{
+    public static void main(String[] args) 
+    {
+       String str1=null;
+       String str2=null;
+       Scanner obj=new Scanner(System.in);
+       System.out.println("Direction of vehicle1:(L/R):");
+       str1=obj.nextLine();
+       System.out.println("Direction of vehicle2:(L/R):");
+       str2=obj.nextLine();
+       try 
+       {
+           if(!str1.equals(str2)){
+               throw new Ques4("Either vehicle2 has to go in "+str1+"direction or vehicle1 has to go in "+str2+"direction");
+           }
+       }
+       catch(Ques4 e)
+       {
+           System.out.println(e);
+       }
+       catch(Exception e)
+       {
+           System.out.println(e);
+       }
+    }
+    
+}
