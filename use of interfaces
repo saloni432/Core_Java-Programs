@@ -1,28 +1,45 @@
-package exp5.pkg2;
-interface A
+package exp5;
+interface operations
 {
-    void meth1();
-    void meth2();
+    public static final int x=10;
+    void result(int r);
 }
-class MyClass implements A
+class Add implements operations
 {
- public void meth1()
- {
-     System.out.println("abstract meth1 executed");
- }
- public void meth2()
-         {
-             System.out.println("abstract meth2 executed");
- }
-         }
-
-
-public class Exp52 {
+    int z;
+    Add(int a)
+    {
+       z=a;
+    }
+    public void result(int a)
+    {
+        int result;
+        result=x+z;
+        System.out.println("result of addition:"+result);
+    }
+}
+class Mul implements operations
+{
+    int y;
+    Mul(int a)
+    {
+       y=a; 
+    }
+    public void result (int a)
+    {
+        int result;
+        result=y*x;
+        System.out.println("result of multiplication:"+result);
+    }
+}
+ class Exp53 
+{
     public static void main(String[] args)
     {
-        MyClass obj=new MyClass ();
-        obj.meth1();
-        obj.meth2();
+       Add a=new Add(2);
+       Mul c = new Mul(2);
+       a.result(5);
+       c.result(6);
     }
     
 }
