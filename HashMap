@@ -1,0 +1,19 @@
+package exp9.pkg6;
+import java.util.*;
+
+public class Exp96
+{
+    public static void main(String[] args) 
+    {
+       HashMap<Integer,String> h=new HashMap<Integer,String>();  
+        h.put(1,"apple");
+        h.put(2,"banana");
+        h.put(3,"orange");
+        h.put(4,"grapes");
+        System.out.println(h.containsKey(3));//checking whether it contains particular key
+        System.out.println(h.containsValue("apple"));//checking whether it contains particular value
+        System.out.println(h.keySet());//getting all keys
+        System.out.println(h.entrySet());//getting all key-value pairs
+    }
+    
+}
