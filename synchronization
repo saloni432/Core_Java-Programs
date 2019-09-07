@@ -1,0 +1,25 @@
+package exp9.pkg3;
+class Test implements Runnable 
+{
+    int n=1;
+    synchronized public void run() 
+    {
+    System.out.println(n++);
+    }
+
+ }
+public class Exp93
+{
+
+    static Thread[] th = new Thread[10];
+    public static void main(String[] args)
+    {
+        Test t= new Test();
+        for(int i=0;i<10;i++)
+        {
+            th[i] = new Thread(t);
+            th[i].start();
+        }
+    }
+}
+
